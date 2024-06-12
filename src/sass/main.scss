@@ -1,0 +1,23 @@
+@import "base";
+@import "variables";
+@import "card";
+@import "form";
+
+body {
+  min-height: 100vh;
+  font-family: $ff-s;
+  font-size: $fs-600;
+  padding-block: 2rem;
+  
+  background-image: url("../assets/images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  @media (min-width: 50em) {
+    background-image: url("../assets//images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+  }
+}
+.container {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 5rem;
+}

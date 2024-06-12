@@ -1,0 +1,94 @@
+.card{
+    display: grid;
+    justify-content: center;
+    @media(min-width: 50em){
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-images{
+        display: flex;
+        flex-direction: column;
+        gap:2rem;
+        color:$clr-neutral-white;
+       
+        .card-front{
+            max-width: 25rem;
+            width: 100%;
+            position: relative;
+            background-image: url("../assets/images/bg-card-front.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            gap:3rem;
+            @media(max-width: 50em){
+                       order:2;
+                        transform: translateY(-50%);
+  
+                }
+            .card-content p{
+                letter-spacing: 0.2em;
+                font-size: $fs-600;
+            }
+             .circle-fill{
+                padding: 0.5em 0.5em;
+                background-color: $clr-neutral-white;
+                border-radius: 50%;
+            }
+            .circle-outline{
+                padding: 0.1em 0.7em;
+                border-radius: 50%;
+                border: 1px solid $clr-neutral-white;
+                margin-left: 0.5em;
+            }
+            
+            .card-name-container{
+                margin-top: 1em;
+                display:flex;
+                justify-content: space-between;
+                font-size: $fs-500;
+                span:first-child{
+                    text-transform: uppercase;      
+
+                }
+
+            }
+        }
+        .card-back{
+            max-width: 25rem;
+            position: relative;
+            width: 100%;
+            background-image: url("../assets/images/bg-card-back.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding:6rem 3rem;
+            border-radius: 10px;
+            transform: translateX(20%);
+            font-size: $fs-500;
+            position: relative;
+               .cvc{
+                position:relative;
+                width: fit-content;
+                height: fit-content;
+                top:60%;
+                left:80%;
+                letter-spacing: 0.2em;
+
+                /* position: absolute;
+                top: 20px;
+                right: 60px;
+                height: 100%;
+                display: flex;
+                align-items: center; */
+               }
+            @media(max-width: 50em){
+                
+                    order:1;
+                    transform: translateX(10%);
+    
+                }
+        }
+       
+        }
+    }
